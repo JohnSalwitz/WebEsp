@@ -1,0 +1,11 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #ced4da;
+}
+
+.command_window {
+    max-width: 80%;
+    margin-left : 10%;
+}
+
