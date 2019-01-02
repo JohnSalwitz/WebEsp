@@ -9,3 +9,12 @@ body {
     margin-left : 10%;
 }
 
+.log_window {
+    font-family: "Century";
+    font-size: 120%;
+    height:300px;
+    border:1px solid;
+    overflow:auto;
+    color: black;
+    background-color: #EEEEEE;
+}

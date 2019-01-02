@@ -6,7 +6,6 @@ import requests
 # Low tech way to run a background task after the server starts up.
 #
 class Backgrounder:
-
     def __init__(self):
         self.worker = None
         self.delay = None

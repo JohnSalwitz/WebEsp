@@ -1,29 +1,33 @@
-import os, re
+import os
 from unittest import TestCase
 
 
 class TCLHandler:
-
-    _source_folder = r".\tcl"
+    _source_folder = "data"
     _extension = '.tcl'
     _current_file = None
     _tcl_buffer = ""
 
     def __init__(self):
-        pass
+        cwd = os.getcwd()
+        self._source_folder = os.path.join(cwd, os.path.normpath(self._source_folder))
 
     def file_list(self):
         bases = set([f["base_name"] for f in self._files()])
         return ', '.join(bases)
 
+    # loads a data file from disk.  returns name, version, contents
     def load(self, fname):
+        if not fname.endswith(self._extension):
+            fname = fname + self._extension
+
         version = self._get_latest_version(fname)
         fname = self.set_version(fname, version)
         self._tcl_buffer = ""
-        self._current_file = os.path.abspath(os.path.join(self._source_folder, fname))
+        self._current_file = os.path.join(self._source_folder, fname)
         with open(self._current_file, 'r') as f:
             self._tcl_buffer = f.read()
-        return self._current_file,  version, self._tcl_buffer
+        return self._current_file, version, self._tcl_buffer
 
     # write to next version of this file...
     def save(self, tcl_buffer2):
@@ -32,7 +36,7 @@ class TCLHandler:
         if tcl_buffer2 != self._tcl_buffer:
             version = version + 1
             new_file = self.set_version(fname, version)
-            new_file = os.path.abspath(os.path.join(self._source_folder, new_file))
+            new_file = os.path.join(self._source_folder, new_file)
             self._current_file = new_file
             with open(self._current_file, 'w') as f:
                 f.write(tcl_buffer2)
@@ -40,15 +44,15 @@ class TCLHandler:
         return self._current_file, version, tcl_buffer2
 
     def get_basename(self, fname):
-        base,_,extension = self._get_parts(fname)
+        base, _, extension = self._get_parts(fname)
         return "{}.{}".format(base, extension)
 
     def set_version(self, fname, version):
-        base,_,extension = self._get_parts(fname)
+        base, _, extension = self._get_parts(fname)
         return self._set_parts(base, str(version), extension)
 
     def get_version(self, fname):
-        _,version,_ = self._get_parts(fname)
+        _, version, _ = self._get_parts(fname)
         return int(version)
 
     def _get_latest_version(self, fname):
@@ -73,26 +77,28 @@ class TCLHandler:
         return ret
 
     def _files(self):
-        path = os.path.abspath(self._source_folder)
-        ff = [{"base_name": self.get_basename(fn), "version": self.get_version(fn)} for fn in os.listdir(path)]
-        return [{"base_name": self.get_basename(fn), "version": self.get_version(fn)} for fn in os.listdir(path)]
+        ff = [{"base_name": self.get_basename(fn), "version": self.get_version(fn)} for fn in
+              os.listdir(self._source_folder)]
+        return [{"base_name": self.get_basename(fn), "version": self.get_version(fn)} for fn in
+                os.listdir(self._source_folder)]
+
 
 class TestTCLSource(TestCase):
 
     def test__get_basename(self):
         tcl = TCLHandler()
-        self.assertEqual("test1.tcl", tcl.get_basename("test1.1.tcl"))
-        self.assertEqual("test1.tcl", tcl.get_basename("test1.tcl"))
+        self.assertEqual("test1.data", tcl.get_basename("test1.1.data"))
+        self.assertEqual("test1.data", tcl.get_basename("test1.data"))
 
     def test__set_version(self):
         tcl = TCLHandler()
-        self.assertEqual("test1.2.tcl", tcl.set_version("test1.tcl", 2))
-        self.assertEqual("test1.2.tcl", tcl.set_version("test1.3.tcl", 2))
+        self.assertEqual("test1.2.data", tcl.set_version("test1.data", 2))
+        self.assertEqual("test1.2.data", tcl.set_version("test1.3.data", 2))
 
     def test__get_version(self):
         tcl = TCLHandler()
-        self.assertEqual(2, tcl.get_version("test1.2.tcl"))
-        self.assertEqual(1, tcl.get_version("test.tcl"))
+        self.assertEqual(2, tcl.get_version("test1.2.data"))
+        self.assertEqual(1, tcl.get_version("test.data"))
 
     def test_file_list(self):
         tcl = TCLHandler()
@@ -102,14 +108,14 @@ class TestTCLSource(TestCase):
 
     def test_load(self):
         tcl = TCLHandler()
-        fnm, version, tcl_text = tcl.load("test.tcl")
+        fnm, version, tcl_text = tcl.load("test.data")
         print(fnm, version, tcl)
         self.assertTrue(len(fnm) > 0)
         self.assertTrue(version > 0)
 
     def test_save(self):
         tcl = TCLHandler()
-        fnm, version, tcl_text = tcl.load("test.tcl")
+        fnm, version, tcl_text = tcl.load("test.data")
         self.assertTrue(len(fnm) > 0)
         self.assertTrue(version > 0)
         fnm = tcl.save("This is another version")

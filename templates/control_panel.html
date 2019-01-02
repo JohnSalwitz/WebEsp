@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+
+    <title>Mind_Reader</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Custom for this app... -->
+    <link rel="stylesheet" href="static/css/main_style.css">
+
+<body>
+
+<form class="command_window">
+    <h4 class="form-signin-heading">Command...</h4>
+    <textarea id="command_win"
+              class="form-control"
+              rows="15"
+              style="background-color:#2B1717; color:#EEEEEE;"
+              spellcheck="false"></textarea>
+</form>
+
+<br>
+
+
+<div class="command_window">
+    <ul class="nav nav-tabs">
+        <li><a data-toggle="tab" href="#log">LOG</a></li>
+        <li class="active"><a data-toggle="tab" href="#tcl">TCL</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="tcl" class="tab-pane fade in active">
+            <h4 class="form-signin-heading" id="tcl_title" style="float: left">TCL...</h4>
+            <h4 class="form-signin-heading" id="tcl_version" style="float: right">--</h4>
+            <textarea class="form-control"
+                      id="tcl_text"
+                      rows="15"
+                      spellcheck="false"></textarea>
+            <button type="button" id="run_button" class="btn btn-primary btn-lg">RUN</button>
+            <button type="button" id="save_button" class="btn btn-success btn-lg" style="float: right">SAVE</button>
+        </div>
+        <div id="log" class="tab-pane fade">
+            <h3>LOG...</h3>
+            <div id="log_text" class="log_window"></div>
+            <button type="button" id="clear_log_button" class="btn btn-primary btn-lg">Clear All</button>
+        </div>
+
+    </div>
+
+    <script>
+        var server_url = '{{ server_url }}';
+    </script>
+    <script src="static/js/script.js"></script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+</body>
+</html>
+

@@ -1,0 +1,11 @@
+{
+    "127.0.0.1": {
+        "background_script": "",
+        "foreground_script": "",
+        "name": "127.0.0.1",
+        "subscriptions": [
+            "cat_in_box"
+        ],
+        "url": "127.0.0.1"
+    }
+}

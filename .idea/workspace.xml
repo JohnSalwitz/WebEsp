@@ -2,20 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5138bd68-28fd-4e23-bbe0-9478b85d9a17" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TCLHandler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/main_style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tasks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tcl/test.tcl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tcl/test2.tcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ESPManager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logging.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PubSub.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/start_dust_collector.tcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/stop_dust_collector.tcl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/EspServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EspServer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Command.py" beforeDir="false" afterPath="$PROJECT_DIR$/Command.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TCLHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/TCLHandler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/signin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/jquery-1.9.0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/main_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signUp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tcl/test.tcl" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.tcl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tcl/test2.tcl" beforeDir="false" afterPath="$PROJECT_DIR$/data/test2.tcl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/signUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/control_panel.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,85 +30,31 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/PythonFlaskjQueryAjax$Unittests_for_TCLSource_TestTCLSource_test__set_version.coverage" NAME="Unittests for TCLSource.TestTCLSource.test__set_version Coverage Results" MODIFIED="1542663895745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PythonFlaskjQueryAjax$Unittests_for_TCLSource_TestTCLSource.coverage" NAME="Unittests for TCLHandler.TestTCLSource Coverage Results" MODIFIED="1542678195180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonFlaskjQueryAjax$Unittests_for_TCLSource_TestTCLSource_test__get_version.coverage" NAME="Unittests for TCLSource.TestTCLSource.test__get_version Coverage Results" MODIFIED="1542663912527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EspServer$Logging.coverage" NAME="Logging Coverage Results" MODIFIED="1543902782064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonFlaskjQueryAjax$Unittests_for_TCLSource_TestTCLSource_test_file_list.coverage" NAME="Unittests for TCLSource.TestTCLSource.test_file_list Coverage Results" MODIFIED="1542665676617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonFlaskjQueryAjax$Unittests_for_TCLSource_TestTCLSource_test_load.coverage" NAME="Unittests for TCLSource.TestTCLSource.test_load Coverage Results" MODIFIED="1542665751588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonFlaskjQueryAjax$Unittests_for_TCLSource_TestTCLSource_test_save.coverage" NAME="Unittests for TCLHandler.TestTCLSource.test_save Coverage Results" MODIFIED="1542676930767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PythonFlaskjQueryAjax$PythonFlaskjQueryAjax.coverage" NAME="PythonFlaskjQueryAjax Coverage Results" MODIFIED="1542681661914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonFlaskjQueryAjax$Unittests_in_TCLSource_py.coverage" NAME="Unittests in TCLSource.py Coverage Results" MODIFIED="1542666328017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/EspServer$PythonFlaskjQueryAjax.coverage" NAME="PythonFlaskjQueryAjax Coverage Results" MODIFIED="1542682603210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EspServer$Unittests_in_Logging.coverage" NAME="Unittests in Logging Coverage Results" MODIFIED="1544074281263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonFlaskjQueryAjax$Unittests_for_TCLSource_TestTCLSource_test__get_basename.coverage" NAME="Unittests for TCLSource.TestTCLSource.test__get_basename Coverage Results" MODIFIED="1542664781278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PythonFlaskjQueryAjax$Unittests_for_TCLSource_TestTCLSource.coverage" NAME="Unittests for TCLHandler.TestTCLSource Coverage Results" MODIFIED="1542678195180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PythonFlaskjQueryAjax$PythonFlaskjQueryAjax.coverage" NAME="PythonFlaskjQueryAjax Coverage Results" MODIFIED="1542681661914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EspServer$PythonFlaskjQueryAjax.coverage" NAME="PythonFlaskjQueryAjax Coverage Results" MODIFIED="1546389738417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EspServer$Remote_EspServer.coverage" NAME="Remote_EspServer Coverage Results" MODIFIED="1545284557184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="PythonFlaskjQueryAjax" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TCLHandler.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TCLHandler.py">
+      <file leaf-file-name="ESPManager.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ESPManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="39" column="55" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="55" />
+            <state relative-caret-position="-1156">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2499">
-              <caret line="147" selection-start-line="147" selection-end-line="147" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/main_style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="signUp.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/signUp.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tasks.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tasks.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Command.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Command.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,14 +71,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>h</find>
-      <find>home</find>
-      <find>parseline</find>
-      <find>help</find>
-      <find>new_command_line</find>
-      <find>process_key</find>
-      <find>_get_latest_version</find>
+      <find>handle_connection</find>
       <find>tcl_title</find>
+      <find>parse</find>
+      <find>get_control_message</find>
+      <find>print_topics</find>
+      <find>_log_buffer</find>
+      <find>_tcl_buffer</find>
+      <find>handle_command_return</find>
+      <find>forEach</find>
+      <find>each</find>
+      <find>for</find>
+      <find>log</find>
+      <find>_control_block</find>
+      <find>log_text</find>
+      <find>request</find>
+      <find>url</find>
+      <find>hot_no</find>
+      <find>delay</find>
+      <find>timed_out</find>
+      <find>start_worker</find>
+      <find>_timeout_period</find>
+      <find>get_esp_status</find>
+      <find>foreground_script</find>
+      <find>queue</find>
+      <find>TCLHandler</find>
+      <find>hot_node</find>
+      <find>load</find>
+      <find>_hot_node</find>
+      <find>data</find>
+      <find>run_hot_script</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -139,7 +111,6 @@
       <list>
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/static/css/signin.css" />
-        <option value="$PROJECT_DIR$/static/css/main_style.css" />
         <option value="$PROJECT_DIR$/templates/test.html" />
         <option value="$PROJECT_DIR$/static/js/script_back.js" />
         <option value="$PROJECT_DIR$/cmd_jfs.py" />
@@ -149,10 +120,21 @@
         <option value="$PROJECT_DIR$/tcl/test.tcl" />
         <option value="$PROJECT_DIR$/test_TCLSource.py" />
         <option value="$PROJECT_DIR$/TCLSource.py" />
-        <option value="$PROJECT_DIR$/Command.py" />
-        <option value="$PROJECT_DIR$/TCLHandler.py" />
-        <option value="$PROJECT_DIR$/static/js/script.js" />
         <option value="$PROJECT_DIR$/templates/signUp.html" />
+        <option value="$PROJECT_DIR$/test_JSONLogger.py" />
+        <option value="$PROJECT_DIR$/static/css/main_style.css" />
+        <option value="$PROJECT_DIR$/static/js/script.js" />
+        <option value="$PROJECT_DIR$/templates/control_panel.html" />
+        <option value="$PROJECT_DIR$/Logging.py" />
+        <option value="$PROJECT_DIR$/tasks.py" />
+        <option value="$PROJECT_DIR$/pub_sub.py" />
+        <option value="$PROJECT_DIR$/tcl/run_cat_fan.tcl" />
+        <option value="$PROJECT_DIR$/tcl/start_dust_collector.tcl" />
+        <option value="$PROJECT_DIR$/tcl/stop_dust_collector.tcl" />
+        <option value="$PROJECT_DIR$/PubSub.py" />
+        <option value="$PROJECT_DIR$/TCLHandler.py" />
+        <option value="$PROJECT_DIR$/Command.py" />
+        <option value="$PROJECT_DIR$/ESPManager.py" />
         <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
@@ -167,22 +149,32 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="11" />
-    <option name="width" value="1936" />
-    <option name="height" value="1065" />
+    <option name="x" value="2202" />
+    <option name="y" value="1" />
+    <option name="width" value="1319" />
+    <option name="height" value="1031" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="EspServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="EspServer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EspServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EspServer" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EspServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EspServer" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EspServer" type="b2602c69:ProjectViewProjectNode" />
@@ -192,26 +184,32 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/GitHub/PythonFlaskjQueryAjax/templates/signUp.html" />
-    <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SearchEverywhereHistoryKey" value="_&#9;FILE&#9;file://E:/GitHub/EspServer/.idea/inspectionProfiles/Project_Default.xml" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\GitHub\PythonFlaskjQueryAjax" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\GitHub\EspServer\tcl" />
       <recent name="E:\GitHub\EspServer" />
       <recent name="E:\GitHub\PythonFlaskjQueryAjax\tcl" />
       <recent name="E:\GitHub\PythonFlaskjQueryAjax\data" />
       <recent name="E:\GitHub\PythonFlaskjQueryAjax\static\js" />
-      <recent name="E:\GitHub\PythonFlaskjQueryAjax\templates" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\GitHub\PythonFlaskjQueryAjax" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -227,13 +225,34 @@
     </option>
   </component>
   <component name="RunManager" selected="Flask server.PythonFlaskjQueryAjax">
+    <configuration name="Remote_EspServer" type="PythonConfigurationType" factoryName="Python">
+      <module name="EspServer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="PythonFlaskjQueryAjax" type="Python.FlaskServer" factoryName="Flask server">
+      <option name="additionalOptions" value="--host=0.0.0.0 --port=5000" />
+      <option name="application" value="" />
       <module name="EspServer" />
       <option name="target" value="$PROJECT_DIR$/app.py" />
       <option name="targetType" value="PATH" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Python35\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -253,20 +272,6 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;TCLHandler.TestTCLSource&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-    </configuration>
-    <configuration name="Unittests for TCLHandler.TestTCLSource.test_file_list" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="EspServer" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;TCLHandler.TestTCLSource.test_file_list&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <configuration name="Unittests for TCLHandler.TestTCLSource.test_load" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -297,6 +302,21 @@
       <option name="_new_target" value="&quot;TCLHandler.TestTCLSource.test_save&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
+    <configuration name="Unittests in Logging" type="tests" factoryName="Unittests">
+      <module name="EspServer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_pattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Logging.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
     <configuration name="Unittests in TCLHandler.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="EspServer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -313,7 +333,8 @@
     </configuration>
     <list>
       <item itemvalue="Flask server.PythonFlaskjQueryAjax" />
-      <item itemvalue="Python tests.Unittests for TCLHandler.TestTCLSource.test_file_list" />
+      <item itemvalue="Python.Remote_EspServer" />
+      <item itemvalue="Python tests.Unittests in Logging" />
       <item itemvalue="Python tests.Unittests for TCLHandler.TestTCLSource.test_load" />
       <item itemvalue="Python tests.Unittests for TCLHandler.TestTCLSource" />
       <item itemvalue="Python tests.Unittests in TCLHandler.py" />
@@ -325,7 +346,6 @@
         <item itemvalue="Python tests.Unittests for TCLHandler.TestTCLSource.test_save" />
         <item itemvalue="Python tests.Unittests in TCLHandler.py" />
         <item itemvalue="Python tests.Unittests for TCLHandler.TestTCLSource.test_load" />
-        <item itemvalue="Python tests.Unittests for TCLHandler.TestTCLSource.test_file_list" />
       </list>
     </recent_temporary>
   </component>
@@ -343,62 +363,64 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_TCLSource_TestTCLSource - 2018.11.19 at 17h 13m 40s.xml">
-      <configuration name="Unittests for TCLSource.TestTCLSource" configurationId="tests" />
+    <history-entry file="Unittests_in_Logging - 2018.12.04 at 22h 44m 53s.xml">
+      <configuration name="Unittests in Logging" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_TCLSource_TestTCLSource_test_save - 2018.11.19 at 17h 15m 09s.xml">
-      <configuration name="Unittests for TCLSource.TestTCLSource.test_save" configurationId="tests" />
+    <history-entry file="Unittests_in_Logging - 2018.12.04 at 22h 45m 18s.xml">
+      <configuration name="Unittests in Logging" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_TCLSource_TestTCLSource_test_save - 2018.11.19 at 17h 15m 44s.xml">
-      <configuration name="Unittests for TCLSource.TestTCLSource.test_save" configurationId="tests" />
+    <history-entry file="Unittests_in_Logging - 2018.12.04 at 22h 45m 54s.xml">
+      <configuration name="Unittests in Logging" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_TCLSource_TestTCLSource_test_save - 2018.11.19 at 17h 15m 57s.xml">
-      <configuration name="Unittests for TCLSource.TestTCLSource.test_save" configurationId="tests" />
+    <history-entry file="Unittests_in_Logging - 2018.12.04 at 22h 46m 04s.xml">
+      <configuration name="Unittests in Logging" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_TCLHandler_TestTCLSource_test_save - 2018.11.19 at 17h 22m 11s.xml">
-      <configuration name="Unittests for TCLHandler.TestTCLSource.test_save" configurationId="tests" />
+    <history-entry file="Unittests_in_Logging - 2018.12.04 at 22h 46m 25s.xml">
+      <configuration name="Unittests in Logging" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_TCLHandler_TestTCLSource - 2018.11.19 at 17h 22m 18s.xml">
-      <configuration name="Unittests for TCLHandler.TestTCLSource" configurationId="tests" />
+    <history-entry file="Unittests_in_Logging - 2018.12.05 at 21h 09m 55s.xml">
+      <configuration name="Unittests in Logging" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_TCLHandler_TestTCLSource - 2018.11.19 at 17h 23m 07s.xml">
-      <configuration name="Unittests for TCLHandler.TestTCLSource" configurationId="tests" />
+    <history-entry file="Unittests_in_Logging - 2018.12.05 at 21h 28m 52s.xml">
+      <configuration name="Unittests in Logging" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_TCLHandler_TestTCLSource - 2018.11.19 at 17h 42m 40s.xml">
-      <configuration name="Unittests for TCLHandler.TestTCLSource" configurationId="tests" />
+    <history-entry file="Unittests_in_Logging - 2018.12.05 at 21h 29m 43s.xml">
+      <configuration name="Unittests in Logging" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_TCLHandler_TestTCLSource - 2018.11.19 at 17h 43m 11s.xml">
-      <configuration name="Unittests for TCLHandler.TestTCLSource" configurationId="tests" />
+    <history-entry file="Unittests_in_Logging - 2018.12.05 at 21h 30m 11s.xml">
+      <configuration name="Unittests in Logging" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_TCLHandler_TestTCLSource - 2018.11.19 at 17h 43m 15s.xml">
-      <configuration name="Unittests for TCLHandler.TestTCLSource" configurationId="tests" />
+    <history-entry file="Unittests_in_Logging - 2018.12.05 at 21h 31m 21s.xml">
+      <configuration name="Unittests in Logging" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="11" y="0" width="1936" height="1065" extended-state="0" />
+    <frame x="2202" y="1" width="1319" height="1031" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" sideWeight="0.5015015" side_tool="true" visible="true" weight="0.018268468" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="File Transfer" order="8" weight="0.0" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32900432" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32900432" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24675325" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.121212125" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5038932" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32900432" />
-      <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4985755" visible="true" weight="0.25266525" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9243604" visible="true" weight="0.35980937" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32792208" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" sideWeight="0.5014245" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3939394" />
+      <window_info id="Favorites" order="2" sideWeight="0.0756396" side_tool="true" visible="true" weight="0.35980937" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4599567" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Remote Host" order="3" sideWeight="0.4984985" weight="0.2510661" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,41 +431,24 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="44" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ESPManager.py</url>
+          <line>193</line>
+          <option name="timeStamp" value="157" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="158" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TCLHandler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="39" column="55" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2499">
-          <caret line="147" selection-start-line="147" selection-end-line="147" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/main_style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Command.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1224">
@@ -454,7 +459,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/signUp.html">
+    <entry file="file://$PROJECT_DIR$/templates/control_panel.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
@@ -474,30 +479,8 @@
     <entry file="file://$PROJECT_DIR$/static/js/script_back.js" />
     <entry file="file://$PROJECT_DIR$/templates/test.html" />
     <entry file="file://$PROJECT_DIR$/cmd_jfs.py" />
-    <entry file="file://C:/Python35/Lib/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="1597" selection-start-line="1597" selection-end-line="1597" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python35/Lib/cmd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="216" selection-start-line="216" selection-end-line="216" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tcl/test2.tcl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_TCLSource.py" />
-    <entry file="file://$PROJECT_DIR$/tcl/test2.2.tcl" />
-    <entry file="file://$PROJECT_DIR$/tcl/test.tcl">
+    <entry file="file://$PROJECT_DIR$/data/test.tcl">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
@@ -512,58 +495,248 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tcl/test.2.tcl" />
+    <entry file="file://$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28271">
+          <caret line="1663" selection-start-line="1663" selection-end-line="1663" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_JSONLogger.py" />
+    <entry file="file://C:/Python35/Lib/os.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12308">
+          <caret line="724" selection-start-line="724" selection-end-line="724" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python35/Lib/logging/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="979" selection-start-line="979" selection-end-line="979" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python35/Lib/runpy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="183" selection-start-line="183" selection-end-line="183" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/control_panel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="58" column="47" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spam.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/main_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tcl/test.3.tcl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tcl/test.5.tcl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tcl/test2.2.tcl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tcl/test2.4.tcl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tcl/test2.8.tcl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tcl/test2.11.tcl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tcl/test2.13.tcl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tcl/test2.15.tcl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test2.tcl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tcl/test.9.tcl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/stop_dust_collector.tcl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/start_dust_collector.tcl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/run_cat_fan.tcl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Logging.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-425">
+          <caret line="50" selection-start-line="50" selection-end-line="50" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python35/Lib/site-packages/flask/_compat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TCLHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python35/Lib/site-packages/flask/cli.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="182" selection-start-line="182" selection-end-line="182" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python35/Lib/site-packages/werkzeug/serving.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2516">
+          <caret line="191" column="59" lean-forward="true" selection-start-line="191" selection-start-column="59" selection-end-line="191" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python35/Lib/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="1996" selection-start-line="1996" selection-end-line="1996" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PubSub.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/esp_save.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python35/Lib/cmd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2213">
+          <caret line="216" selection-start-line="216" selection-end-line="216" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Command.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
+        <state relative-caret-position="2125">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/main_style.css">
+    <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TCLHandler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="39" column="55" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="55" />
+        <state relative-caret-position="612">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/script.js">
+    <entry file="file://$PROJECT_DIR$/ESPManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2499">
-          <caret line="147" selection-start-line="147" selection-end-line="147" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/signUp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+        <state relative-caret-position="-1156">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
