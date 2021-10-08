@@ -6,7 +6,7 @@ from unittest import TestCase
 
 #
 # Custom logger --
-# Q's log messages (print optional) for retreval by remote client
+# Q's log messages (print optional) for retrieval by remote client
 # Stores log messages as json
 # Adds custom field(s) -- including url of logger
 #
@@ -128,7 +128,6 @@ class TestJSONLogger(TestCase):
 
     def test_rows(self):
         self.jlog.setLevel(logging.DEBUG)
-
         self.jlog.event("info", "Row 1")
         self.jlog.event("info", "Row 2")
         self.jlog.event("info", "Row 3")

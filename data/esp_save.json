@@ -1,0 +1,10 @@
+{
+    "84:F3:EB:4C:9A:F4": {
+        "background_script": "",
+        "foreground_script": "",
+        "mac": "84:F3:EB:4C:9A:F4",
+        "name": "cat_sitter",
+        "subscriptions": [],
+        "url": "192.168.1.128"
+    }
+}

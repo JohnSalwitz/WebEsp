@@ -16,11 +16,11 @@ class PubSubBroker:
     def publish(title):
         """Transmits a topic to all subscribing esps.  passes topic title and foreground script. Ie: Subscribing to message
          will run script... """
-        if title in topics:
-            tcl_handler = TCLHandler()
-            _, _, tcl = tcl_handler.load(topics[title])
-            count = esp_manager.publish_to_esps(title, tcl)
-            return count
+        #if title in topics:
+            #tcl_handler = TCLHandler()
+            #_, _, tcl = tcl_handler.load(topics[title])
+            #count = esp_manager.publish_to_esps(title, tcl)
+            #return count
 
         jlog.error("Unknown Title Sent To PubSubBroker {} Can't Publish.".format(title))
         return 0

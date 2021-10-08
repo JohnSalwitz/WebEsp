@@ -2,7 +2,7 @@ import time
 import os
 from Logging import jlog
 from flask import json
-from mqq_handler import mqq_handler
+
 
 class ESPNode:
     # seconds before esp times out
@@ -16,6 +16,7 @@ class ESPNode:
             self.background_script = ""
             self.foreground_script = ""
             self.name = mac
+            self.clear_subscriptions()
         else:
             self._state = default_state
 
@@ -89,10 +90,6 @@ class ESPNode:
     @background_script.setter
     def background_script(self, value):
         self._state["background_script"] = value
-        # updates background script on esp via mqq
-        if value is not None and len(value) > 0:
-            mqq_handler.publish("esp/{}/background_script".format(self.name), value)
-
 
     @property
     def foreground_script(self):
@@ -101,9 +98,19 @@ class ESPNode:
     @foreground_script.setter
     def foreground_script(self, value):
         self._state["foreground_script"] = value
-        # updates foreground script on esp via mqq
-        if value is not None and len(value) > 0:
-            mqq_handler.publish("esp/{}/foreground_script".format(self.name), value)
+
+    def subscriptions(self):
+        return self._state["subscriptions"]
+
+    def clear_subscriptions(self):
+        self._state["subscriptions"] = []
+
+    def add_subscription(self, title):
+        self._state["subscriptions"].append(title)
+
+    '''returns true if this esp subscripts to a particular message'''
+    def subscribes_to(self, title):
+        return title in self._state["subscriptions"]
 
 
 # factory/manager for connected nodes
@@ -116,8 +123,31 @@ class ESPManager:
         self.hot_node = None
         self._save_path = os.path.join( os.getcwd(), os.path.normpath(self._save_folder),self._save_file)
 
-    def init(self):
-        self.refresh_node_list()
+    # esp node connects to the server.  Return control message to node
+    def handle_connection(self, mac, url):
+        # first connection?
+        if mac not in self.nodes:
+            esp_save = self._load_esp(mac)
+            self.nodes[mac] = ESPNode(mac, url, esp_save)
+            jlog.info("ESP Node Connected: {}".format(mac))
+        esp = self.nodes[mac]
+        esp.touch()
+
+        if self.hot_node is None:
+            self.hot_node = esp
+
+        return esp.get_control_message()
+
+    def update(self):
+        kill_esps = []
+        for esp in self.nodes.values():
+            if esp.timed_out():
+                kill_esps.append(esp)
+        for esp in kill_esps:
+            del self.nodes[esp.mac]
+            if self.hot_node == esp:
+                self.hot_node = None
+            jlog.info("ESP Node Disconnected: {}".format(esp.mac))
 
     def get_node_from_mac(self, mac):
         if mac in self.nodes:
@@ -151,6 +181,17 @@ class ESPManager:
             msg = msg + str(esp) + "\n"
         return msg
 
+    # looks for any esps that subscribe to this message.  If they do, then the
+    # foreground script for that esp is set based on that message
+    # returns the # of esps that subscribe to a given message
+    def publish_to_esps(self, title, tcl):
+        count = 0
+        for esp in self.nodes.values():
+            if esp.subscribes_to(title):
+                esp.foreground_script = tcl
+                count += 1
+        return count
+
     # Stores the current state of the esps
     def store_esps(self):
         with open(self._save_path, 'w') as f:
@@ -167,31 +208,6 @@ class ESPManager:
                     return esp_save[mac]
         return None
 
-
-    def refresh_node_list(self):
-        self.nodes = {}
-        self.hot_node = None
-
-        # this function will
-        mqq_handler.add_callback("esp/log", self._handle_node_messages)
-
-        # connected esps will respond to this message
-        mqq_handler.publish("esp/ping_all", "")
-
-    # push mqq log message into log q.
-    def _handle_node_messages(self, client, obj, msg):
-
-        print("NODE MESSAGE: " + msg.topic + " " + str(msg.qos) + " " + str(msg.payload))
-        log_data = json.loads(msg.payload)
-
-        client_name = log_data["client"]
-        if client_name not in self.nodes:
-            esp_save = self._load_esp(client_name)
-            self.nodes[client_name] = ESPNode(client_name, client_name, esp_save)
-            jlog.info("ESP Node Connected: {}".format(client_name))
-            self.nodes[client_name].touch()
-            if self.hot_node is None:
-                self.hot_node = self.nodes[client_name]
 
 # define singleton
 esp_manager = ESPManager()

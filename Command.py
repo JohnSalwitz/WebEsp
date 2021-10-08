@@ -2,7 +2,7 @@ import cmd
 import os
 
 from ESPManager import esp_manager
-from PubSub import PubSubBroker
+from mqq_handler import mqq_handler
 from TCLHandler import TCLHandler
 
 _data_folder = r".\tcl"
@@ -129,28 +129,19 @@ class CommandParser(cmd.Cmd):
     def do_hot(self, arg):
         'Sets the hot node OR returns the current hot node [<url>]'
         if len(arg) > 0:
-            esp = esp_manager.get_node_from_url(arg)
+            esp = esp_manager.get_node_from_mac(arg)
             esp_manager.hot_node = esp
         else:
             esp = esp_manager.hot_node
         return self._msg_form("HOT:  {}".format(esp))
 
-    def do_name(self, arg):
-        """Names the hot esp:  <name>"""
-        esp = esp_manager.hot_node
-        esp.name = arg
-        return self._msg_form("Renamed:   {}".format(esp))
-
-    def do_subscribeto(self, arg):
-        'Adds subscription to hot node <topic title>'
-        esp = esp_manager.hot_node
-        esp.add_subscription(arg)
-        return self._msg_form("Subscribes:   {}".format(esp))
-
     def do_publish(self, arg):
-        'Publishes a message to esps:  publish <topic title>'
-        count = PubSubBroker.publish(arg)
-        return  self._msg_form("{} Subscribed to '{}'".format(count, arg))
+        'Publishes a message to mqq:  publish <topic topic>'
+        parts = arg.split(' ', 1)
+        topic = parts[0]
+        message = parts[1] if len(parts) >= 2 else ""
+        mqq_handler.publish(topic, message)
+        return  self._msg_form("Published: '{} : {}'".format(topic, message))
 
     def default(self, arg):
         return self._msg_form("Unknown Command: `{}`".format(arg))
